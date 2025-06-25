@@ -1,0 +1,78 @@
+Phishing Email Analysis Report
+
+1. Sample Phishing Email:
+
+    Subject: LastPass Security Notice
+
+    Sender: LastPass LastPass@secure-monitor.com
+
+    Body Summary: Claims suspicious activity was found on the LastPass network and asks users to verify if their data was compromised by clicking a link and entering their login credentials.
+
+2. Sender’s Email Address Analysis:
+
+    Email address: LastPass@secure-monitor.com
+
+    Issue: This is not the official domain of LastPass (which should be something like @lastpass.com).
+
+    Spoofing Indicator: The domain is unrelated and likely impersonating LastPass.
+
+3. Email Header Discrepancies:
+
+    Mail sent via: secure-monitor.com
+
+    No DKIM or SPF verification linked to official LastPass domain
+
+    Discrepancy between sender name and sending domain
+
+4. Suspicious Links or Attachments:
+
+    Contains a hyperlink labeled “this secure web site”
+
+    Real link destination is hidden and could lead to a phishing site
+
+    No attachments in this email, but links are suspicious
+
+5. Urgent or Threatening Language:
+
+    Examples:
+
+        “We wanted to alert you…”
+
+        “Some user vault data was taken…”
+
+        “Enter your login information…”
+
+    This language creates fear and urgency, a common phishing tactic
+
+6. Mismatched URLs:
+
+    Displayed link text appears safe but may lead to a harmful URL
+
+    Hovering over the link would likely show a different, suspicious domain
+
+7. Spelling or Grammar Errors:
+
+    Generally correct grammar, but some awkward phrasing:
+
+        “we can tell you if your account was one that was compromised”
+
+    Slightly unprofessional tone for a security notice
+
+8. Summary of Phishing Traits Identified:
+
+    ✅ Spoofed sender domain
+
+    ✅ Suspicious link requesting credentials
+
+    ✅ Fear/urgency language
+
+    ✅ Generic greeting (“Dear LastPass User”)
+
+    ✅ Misleading hyperlink
+
+    ⚠️ Slightly odd grammar
+
+    ❌ No DKIM/SPF verification
+
+Conclusion:
+This email displays multiple clear signs of phishing. Do not click any links or enter login credentials. Always verify such alerts through the official website.
