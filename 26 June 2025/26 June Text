@@ -1,0 +1,52 @@
+
+# Basic Vulnerability Assessment using Nessus Essentials
+
+## Tools Used:
+- Kali Linux VM
+- Nessus Essentials
+
+## Steps Performed:
+1. Installed Nessus Essentials on Kali Linux.
+2. Registered and activated Nessus with a free activation code.
+3. Set up a scan target: Local Machine IP (e.g., 192.168.211.1).
+4. Configured and initiated a Basic Network Scan.
+5. Waited for scan completion (~9 minutes in this case).
+6. Exported the scan results to PDF for documentation.
+
+## Scan Findings Summary:
+- **Total Vulnerabilities Detected**: 30
+    - Critical: 0
+    - High: 0
+    - Medium: 2
+    - Low: 0
+    - Info: 28
+
+## Notable Vulnerabilities:
+1. **SSL Certificate Cannot Be Trusted** (Medium, CVSS: 6.5)
+    - Issue: Invalid or self-signed SSL certificate.
+    - Recommendation: Install a valid CA-signed certificate.
+
+2. **SMB Signing Not Required** (Medium, CVSS: 5.3)
+    - Issue: SMB communication not protected against tampering.
+    - Recommendation: Enable SMB signing via group policy or registry.
+
+## Additional Info-Level Issues:
+- Multiple SMB-related vulnerabilities (versions, dialects, enumeration).
+- TLS/SSL misconfigurations (cipher suite issues, version detection).
+- Device fingerprinting and traceroute information exposure.
+- Common Platform Enumeration (CPE) and OS fingerprinting.
+- Missing authentication for some Windows services.
+
+## Mitigation Steps:
+- Apply secure configurations (SSL, SMB).
+- Disable unused services.
+- Regularly patch and update the OS.
+- Use firewall rules to limit unnecessary access.
+
+## Screenshots:
+Included are the screenshots of:
+- Nessus scan dashboard with results.
+- Full vulnerability PDF report overview.
+- Detailed list of vulnerabilities.
+
+Photos are not in the link they are inside the repo created of 26 June 
