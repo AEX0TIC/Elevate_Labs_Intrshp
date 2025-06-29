@@ -1,0 +1,59 @@
+1 Open Windows Firewall Settings
+
+    Hit the Start Menu, type:
+    Windows Defender Firewall with Advanced Security
+    and open it.
+
+    On the left side, click Inbound Rules. This is where all the rules for incoming traffic live.
+
+2️ Block Port 23 (Telnet)
+
+Let’s make a new rule that blocks any connection to port 23:
+
+    On the right side, click “New Rule...”
+
+    Choose Port → Click Next.
+
+    Select TCP → In the box type: 23
+
+    Click “Block the connection” → Next.
+
+    Apply to all profiles (Domain, Private, Public) → Next.
+
+    Give it a name like: Block Telnet Port 23 → Finish.
+
+Done! Now Windows will block anything trying to get through on port 23.
+
+3️ Install Telnet Client (If Not Installed)
+
+To test it, we’ll use the old-school telnet command, but it’s not installed by default.
+
+    Press Windows + R, type: optionalfeatures, and press Enter.
+
+    Scroll down and check "Telnet Client" → Click OK.
+
+    It’ll install in a few seconds.
+
+4️ Test the Block (Does It Work?)
+
+Now let’s see if your rule is working:
+
+    Open Command Prompt (CMD).
+
+    Type: telnet localhost 23.
+
+If your firewall is blocking port 23 properly, you’ll get: Connecting To localhost...Could not open connection to the host, on port 23: Connect failed.
+
+If the port wasn’t blocked, it might just sit there blinking or show a different message (though in most cases, since nothing is running on port 23, it’ll still fail — we’re just making sure it fails because of the firewall).
+
+5️⃣ Remove the Rule (If You Want to Reset)
+
+Don’t want that rule anymore? Easy:
+
+    Go back to Inbound Rules in the Firewall.
+
+    Find Block Telnet Port 23 → Right-click it → Delete.
+
+That’s it — your firewall is back to its original state.
+
+Picture of the thing is present in the other file inside the same folder only.
